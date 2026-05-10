@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: #fffaf5;
+    color: #333;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* Navbar */
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 8%;
+    background: #2c1d14;
+    color: white;
+}
+.navbar ul li a.active{
+    background-color: #c49b63;
+    color: black;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero */
+
+.hero{
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('./images/download.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content button{
+    padding: 12px 25px;
+    border: none;
+    background: #f8c291;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* About */
+
+.about{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 10%;
+}
+
+.about-text{
+    flex: 1;
+}
+
+.about-image{
+    flex: 1;
+}
+
+.about img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Menu */
+
+.menu{
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.menu h2{
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card{
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3{
+    margin: 15px 0 10px;
+}
+
+.card p{
+    padding: 0 15px;
+}
+
+.card span{
+    display: block;
+    margin: 15px;
+    color: #e67e22;
+    font-weight: bold;
+}
+
+/* Contact */
+
+.contact{
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.contact form{
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.contact button{
+    padding: 12px 25px;
+    border: none;
+    background: #2c1d14;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+    background: #2c1d14;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+
+@media(max-width: 768px){
+
+    nav{
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .logo{
+        justify-content: center;
+    }
+
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    nav ul li{
+        list-style: none;
+    }
+
+    nav a{
+        font-size: 18px;
+    }
+
+}
+
+.cart-btn{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #2c1d14;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.cart-btn:hover{
+    background: #6f4e37;
+}
+.quantity-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.quantity-box button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: #2c1d14;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.quantity-box span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.open-cart-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.cart-btn{
+    transition: all 0.3s ease;
+}
+
+.cart-btn:hover{
+    transform: scale(1.05);
+    background-color: #c49b63;
+    color: black;
+}
+
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+
+    padding: 8px 15px;
+    border-radius: 6px;
+
+    display: inline-block;
+
+    transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar ul li a:hover{
+    background-color: #c49b63;
+    color: black;
+
+    transform: translateY(-3px);
+}
+
+.navbar ul li a.active{
+    background-color: #c49b63;
+    color: black;
+}
+/* Toast Message */
+#toast{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #6f4e37;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 1000;
+}
+
+#toast.show{
+    opacity: 1;
+    visibility: visible;
+}
+@media (max-width: 992px){
+
+    .menu-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+/* HAMBURGER */
+
+.hamburger{
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+/* MOBILE NAVBAR */
+
+@media(max-width: 768px){
+
+    nav{
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .menu-container{
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2{
+        font-size: 32px;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    nav ul.show{
+        display: flex;
+    }
+
+}
+html{
+    scroll-behavior: smooth;
+}

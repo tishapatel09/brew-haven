@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Brew Haven Cafe</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .about-page{
+            padding: 100px 10%;
+        }
+
+        .about-banner{
+            height: 50vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)),
+
+            url('images/aboutcafe.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            text-align: center;
+        }
+
+        .about-banner h1{
+            font-size: 60px;
+        }
+
+        .story{
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 80px;
+            flex-wrap: wrap;
+        }
+
+        .story-text{
+            flex: 1;
+        }
+
+        .story-text h2{
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #6f4e37;
+        }
+
+        .story-text p{
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .story-image{
+            flex: 1;
+        }
+
+        .story-image img{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .features{
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .features h2{
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: #6f4e37;
+        }
+
+        .feature-container{
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .feature-box{
+            background: white;
+            width: 300px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-box h3{
+            margin-bottom: 15px;
+            color: #e67e22;
+        }
+
+        @media(max-width: 768px){
+
+            .about-banner h1{
+                font-size: 40px;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+     <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img src="images/Logo.png" alt="">
+
+            <h1>Brew Haven</h1>
+
+        </div>
+
+        <!-- Hamburger -->
+
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <!-- Nav Links -->
+
+        <ul id="navLinks">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html" class="active">About</a></li>
+
+            <li><a href="menu.html">Menu</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <li><a href="cart.html">Cart 🛒</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Banner -->
+
+    <section class="about-banner">
+
+        <div>
+            <h1>About Brew Haven</h1>
+            <p>Fresh Coffee. Warm Moments.</p>
+        </div>
+
+    </section>
+
+    <!-- Story -->
+
+    <section class="about-page">
+
+        <div class="story">
+
+            <div class="story-text">
+
+                <h2>Our Story</h2>
+
+                <p>
+                    Brew Haven Cafe started with a simple dream —
+                    to create a peaceful and cozy place for coffee lovers.
+                </p>
+
+                <p>
+                    We serve freshly brewed coffee, tasty snacks,
+                    and delicious desserts made with quality ingredients.
+                </p>
+
+                <p>
+                    Whether you want to study, work, relax,
+                    or spend time with friends,
+                    Brew Haven is the perfect place.
+                </p>
+
+            </div>
+
+            <div class="story-image">
+
+                <img src="images/Coffee shop.jpg" alt="Cafe">
+
+            </div>
+
+        </div>
+
+        <!-- Features -->
+
+        <div class="features">
+
+            <h2>Why Choose Us?</h2>
+
+            <div class="feature-container">
+
+                <div class="feature-box">
+                    <h3>☕ Premium Coffee</h3>
+
+                    <p>
+                        We use high quality coffee beans
+                        for rich and fresh taste.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h3>🍰 Fresh Desserts</h3>
+
+                    <p>
+                        Enjoy freshly baked cakes,
+                        pastries, and snacks daily.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h3>💻 Cozy Environment</h3>
+
+                    <p>
+                        Perfect atmosphere for relaxing,
+                        studying, or remote work.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2026 Brew Haven Cafe</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

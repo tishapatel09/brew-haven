@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Brew Haven Cafe</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .menu-banner{
+            height: 50vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)),
+
+            url('images/menu.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            text-align: center;
+        }
+
+        .menu-banner h1{
+            font-size: 60px;
+        }
+
+        .menu-page{
+            padding: 80px 10%;
+        }
+
+        .menu-title{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .menu-title h2{
+            font-size: 40px;
+            color: #6f4e37;
+        }
+
+        .category{
+            margin-bottom: 70px;
+        }
+
+        .category h3{
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #e67e22;
+        }
+
+        .menu-grid{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .menu-card{
+            width: 300px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .menu-card:hover{
+            transform: translateY(-8px);
+        }
+
+        .menu-card img{
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .menu-content{
+            padding: 20px;
+        }
+
+        .menu-content h4{
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .menu-content p{
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .price{
+            color: #e67e22;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        @media(max-width: 768px){
+
+            .menu-banner h1{
+                font-size: 40px;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+     <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img src="images/Logo.png" alt="">
+
+            <h1>Brew Haven</h1>
+
+        </div>
+
+        <!-- Hamburger -->
+
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <!-- Nav Links -->
+
+        <ul id="navLinks">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="menu.html" class="active">Menu</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <li><a href="cart.html">Cart 🛒</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Banner -->
+
+    <section class="menu-banner">
+
+        <div>
+            <h1>Our Menu</h1>
+            <p>Freshly brewed coffee & tasty snacks</p>
+        </div>
+
+    </section>
+
+    <!-- Menu Section -->
+
+    <section class="menu-page">
+
+        <div class="menu-title">
+            <h2>Popular Selections</h2>
+        </div>
+
+        <!-- Coffee -->
+
+        <div class="category">
+
+            <h3>☕ Coffee</h3>
+
+            <div class="menu-grid">
+
+                <div class="menu-card">
+
+                    <img src="images/Cappuccino.jpg" alt="">
+
+                    <div class="menu-content">
+
+                        <h4>Cappuccino</h4>
+
+                        <p>
+                            Rich espresso with creamy milk foam.
+                        </p>
+
+                        <span class="price">₹149</span>
+
+                        <div class="cart-controls">
+ 
+                            <button
+                                class="cart-btn"
+                                onclick="addToCart('Cappuccino')"
+                                data-name="Cappuccino"
+                                data-price="149"
+                                data-image="images/Cappuccino.jpg">
+
+                                Add to Cart
+
+                            </button>
+                        </div>    
+
+                    </div>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <img src="images/latte.jpg" alt="">
+
+                    <div class="menu-content">
+
+                        <h4>Latte</h4>
+
+                        <p>
+                            Smooth coffee with steamed milk.
+                        </p>
+
+                        <span class="price">₹169</span>
+
+                        <div class="cart-controls">
+                            <button
+                                class="cart-btn"
+                                onclick="addToCart('Latte')"
+                                data-name="Latte"
+                                data-price="169"
+                                data-image="images/latte.jpg">
+
+                                Add to Cart
+
+                            </button>
+                        </div>    
+
+                    </div>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <img src="images/Iced Coffee.jpg" alt="">
+
+                    <div class="menu-content">
+
+                        <h4>Cold Coffee</h4>
+
+                        <p>
+                            Refreshing chilled coffee with cream.
+                        </p>
+
+                        <span class="price">₹179</span>
+                        
+                        <div class="cart-controls">
+                            <button
+                                class="cart-btn"
+                                onclick="addToCart('Cold Coffee')"
+                                data-name="Cold Coffee"
+                                data-price="179"
+                                data-image="images/Iced Coffee.jpg">
+
+                                Add to Cart
+
+                            </button>
+                        </div>    
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Snacks -->
+
+        <div class="category">
+
+            <h3>🥪 Snacks</h3>
+
+            <div class="menu-grid">
+
+                <div class="menu-card">
+
+                    <img src="images/Club sandwich.jpg" alt="">
+
+                    <div class="menu-content">
+
+                        <h4>Veg Sandwich</h4>
+
+                        <p>
+                            Grilled vegetable sandwich with cheese.
+                        </p>
+
+                        <span class="price">₹129</span>
+                        
+                        <div class="cart-controls">
+                            <button
+                                class="cart-btn"
+                                onclick="addToCart('Veg Sandwich')"
+                                data-name="Veg Sandwich"
+                                data-price="129"
+                                data-image="images/Club sandwich.jpg">
+
+                                Add to Cart
+
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <img src="images/Choclate croissant.jpg" alt="">
+
+                    <div class="menu-content">
+
+                        <h4>Croissant</h4>
+
+                        <p>
+                            Fresh buttery flaky croissant.
+                        </p>
+
+                        <span class="price">₹99</span>
+                         
+                        <div class="cart-controls">
+                            <button
+                                class="cart-btn"
+                                onclick="addToCart('Croissant')"
+                                data-name="Croissant"
+                                data-price="99"
+                                data-image="images/Choclate croissant.jpg">
+
+                                Add to Cart
+
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <img src="images/Kitchen Tip.jpg" alt="">
+                    <div class="menu-content">
+
+                        <h4>French Fries</h4>
+
+                        <p>
+                            Crispy golden fries with seasoning.
+                        </p>
+
+                        <span class="price">₹119</span>
+
+                        <div class="cart-controls">
+                            <button
+                                class="cart-btn"
+                                onclick="addToCart('French Fries')"
+                                data-name="French Fries"
+                                data-price="199"
+                                data-image="images/Kitchen Tip.jpg">
+                                Add to Cart
+                             </button>
+
+                        </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Desserts -->
+
+        <div class="category">
+
+            <h3>🍰 Desserts</h3>
+
+            <div class="menu-grid">
+
+                <div class="menu-card">
+
+                    <img src="images/Cake.jpg" alt="">
+
+                    <div class="menu-content">
+
+                        <h4>Chocolate Cake</h4>
+
+                        <p>
+                            Soft and rich chocolate layered cake.
+                        </p>
+
+                        <span class="price">₹199</span>
+
+                        <div class="cart-controls">
+                            <button
+                                class="cart-btn"
+                                onclick="addToCart('Chocolate Cake')"
+                                data-name="Chocolate Cake"
+                                data-price="199"
+                                data-image="images/Cake.jpg">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <img src="images/Milkshake.jpg" alt="">
+
+                    <div class="menu-content">
+
+                        <h4>Chocolate Shake</h4>
+
+                        <p>
+                            Creamy Chocolate milkshake with toppings.
+                        </p>
+
+                        <span class="price">₹189</span>
+
+                        <div class="cart-controls">
+                            <button
+                                class="cart-btn"
+                                onclick="addToCart('Chocolate Shake')"
+                                data-name="Chocolate Shake"
+                                data-price="189"
+                                data-image="images/Milkshake.jpg">
+                                Add to Cart
+                            </button>
+                        </div>    
+
+                    </div>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <img src="images/Ice Cream.jpg" alt="">
+
+                    <div class="menu-content">
+
+                        <h4>Ice Cream</h4>
+
+                        <p>
+                            Delicious vanilla ice cream scoop.
+                        </p>
+
+                        <span class="price">₹89</span>
+
+                        <div class="cart-controls">
+                            <button
+                                class="cart-btn"
+                                onclick="addToCart('Ice Cream')"
+                                data-name="Ice Cream"
+                                data-price="89"
+                                data-image="images/Ice Cream.jpg">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2026 Brew Haven Cafe</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function updateCartNavbar() {
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            let total = 0;
+
+            cart.forEach(item => {
+                total += item.quantity;
+            });
+
+            let cartLink = document.getElementById("cart");
+
+            if (cartLink) {
+            cartLink.textContent = `Cart(${total}) 🛒`;
+            }
+        }
+
+// run on page load
+        document.addEventListener("DOMContentLoaded", updateCartNavbar);
+
+// also update instantly when storage changes (VERY IMPORTANT)
+        window.addEventListener("storage", updateCartNavbar);
+    </script>
+    <div id="toast">Item added to cart ☕</div>    
+</body>
+</html>

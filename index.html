@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brew Haven Cafe</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img src="images/Logo.png" alt="">
+
+            <h1>Brew Haven</h1>
+
+        </div>
+
+        <!-- Hamburger -->
+
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <!-- Nav Links -->
+
+        <ul id="navLinks">
+
+            <li><a href="index.html" class="active">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="menu.html">Menu</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <li><a href="cart.html">Cart 🛒</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Fresh Coffee & Cozy Vibes</h2>
+
+            <p>
+                Enjoy premium coffee, delicious snacks,
+                and a relaxing atmosphere.
+            </p>
+
+            <a href="menu.html">
+                <button>Explore Menu</button>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-text">
+            <h2>About Our Cafe</h2>
+
+            <p>
+                Brew Haven is a modern cafe where people
+                can relax, work, and enjoy freshly brewed coffee.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="images/Ambient wallpaper.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+
+        <h2>Popular Items</h2>
+
+        <div class="menu-container">
+
+            <div class="card">
+                <img src="images/Cappuccino.jpg" alt="">
+                <h3>Cappuccino</h3>
+                <p>Rich espresso with milk foam.</p>
+                <span>₹149</span>
+            </div>
+
+            <div class="card">
+                <img src="images/Iced Coffee.jpg" alt="">
+                <h3>Cold Coffee</h3>
+                <p>Refreshing chilled coffee.</p>
+                <span>₹179</span>
+            </div>
+
+            <div class="card">
+                <img src="images/Choclate croissant.jpg" alt="">
+                <h3>Croissant</h3>
+                <p>Fresh buttery croissant.</p>
+                <span>₹99</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Brew Haven Cafe</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- your HTML content above -->
+
+   <script>
+        function updateCartNavbar() {
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            let total = 0;
+
+            cart.forEach(item => {
+                total += item.quantity;
+            });
+
+            let cartLink = document.getElementById("cart");
+
+            if (cartLink) {
+            cartLink.textContent = `Cart(${total}) 🛒`;
+            }
+        }
+
+// run on page load
+        document.addEventListener("DOMContentLoaded", updateCartNavbar);
+
+// also update instantly when storage changes (VERY IMPORTANT)
+        window.addEventListener("storage", updateCartNavbar);
+    </script>
+<div id="toast">Item added to cart ☕</div>
+</body>
+</html>
